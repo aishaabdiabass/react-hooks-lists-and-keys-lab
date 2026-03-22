@@ -1,11 +1,18 @@
-import React from "react";
+function Links() {
+  const links = [
+    { name: "GitHub", url: "https://github.com/liza" },
+    { name: "LinkedIn", url: "https://linkedin.com" },
+  ];
 
-function Links({ github, linkedin }) {
   return (
     <div>
       <h3>Links</h3>
-      <a href={github}>{github}</a>
-      <a href={linkedin}>{linkedin}</a>
+
+      {links.map((link) => (
+        <a key={link.name} href={link.url} target="_blank">
+          {link.name}
+        </a>
+      ))}
     </div>
   );
 }

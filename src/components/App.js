@@ -1,17 +1,33 @@
-import React from "react";
 import NavBar from "./NavBar";
 import Home from "./Home";
 import About from "./About";
 import ProjectList from "./ProjectList";
-import user from "../data/user";
 
 function App() {
+  const projects = [
+    {
+      id: 1,
+      name: "Eco Habit Tracker",
+      technologies: ["React", "CSS", "JavaScript"],
+    },
+    {
+      id: 2,
+      name: "Weather App",
+      technologies: ["API", "JavaScript", "HTML"],
+    },
+    {
+      id: 3,
+      name: "Portfolio Website",
+      technologies: ["React", "Tailwind"],
+    },
+  ];
+
   return (
     <div>
       <NavBar />
-      <Home username={user.name} city={user.city} color={user.color} />
-      <About bio={user.bio} links={user.links} />
-      <ProjectList projects={user.projects} />
+      <Home />
+      <About />
+      <ProjectList projects={projects} />
     </div>
   );
 }

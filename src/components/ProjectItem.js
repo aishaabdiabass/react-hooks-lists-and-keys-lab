@@ -1,13 +1,13 @@
-import React from "react";
-
-function ProjectItem({ name, about, technologies }) {
+function ProjectItem({ name, technologies }) {
   return (
-    <div className="project-item">
+    <div>
       <h3>{name}</h3>
-      <p>{about}</p>
-      <div className="technologies">
-        {/* render a <span> for each technology in the technologies array */}
-      </div>
+
+      {technologies.map((tech) => (
+        <span key={tech} style={{ marginRight: "8px" }}>
+          {tech}
+        </span>
+      ))}
     </div>
   );
 }
